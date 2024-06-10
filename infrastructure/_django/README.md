@@ -38,5 +38,7 @@ A chart to provision a Django instance
 - Route 
 - Deployment
 - Pod Disruption Budget
+- ConfigMap
+- Secret
 
 

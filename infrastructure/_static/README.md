@@ -32,4 +32,6 @@ A chart to provision a static frontend instance
 - Route
 - Deployment
 - Pod Disruption Budget 
+- Secret
+
 ### Other

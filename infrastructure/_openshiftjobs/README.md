@@ -27,6 +27,7 @@ This chart to provision a OpenShift CronJob to process logs from NGINX and backu
 - Analyze and Upload Logs Cronjob
 - Backup Media PVC Cronjob
 - Zip Logs Cronjobs
+- Secret
 
 ### Other
 - Ensure you have the secret with the S3 Values

@@ -1,0 +1,24 @@
+{{- if not (lookup "v1" "ConfigMap" .Release.Namespace .Values.deployment.env.staticConfigMap) }}
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: {{ .Values.deployment.env.staticConfigMap  }}
+  labels: {{ include "app.labels" . | nindent 4 }} 
+  annotations:
+    "helm.sh/resource-policy": "keep"
+data:
+  REACT_APP_SURVEY_LINK: ''
+  REACT_APP_HIGHWAY_LAYER: ''
+  REACT_APP_API_HOST: ''
+  REACT_APP_BASE_MAP: ''
+  MAINTENANCE_MODE: ''
+  REACT_APP_MAP_STYLE: ''
+  ENVIRONMENT: ''
+  REACT_APP_REPLAY_THE_DAY: ''
+  REACT_APP_GEOCODER_HOST: ''
+  REACT_APP_GEOCODER_API_AUTH_KEY: ''
+  REACT_APP_DEPLOYMENT_VERSION: ''
+  REACT_APP_ROUTE_PLANNER: ''
+  REACT_APP_ROUTE_PLANNER_KEY: '' 
+  REACT_APP_OPEN511_LAYER: ''
+{{- end }}
