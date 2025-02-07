@@ -14,6 +14,11 @@
     flex-direction: row;
     flex-wrap: wrap;
     margin-bottom: 1rem;
+    align-items: center;
+    background-color: #FAF9F8;
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 8px;
 
     @media (min-width: 1200px) {
       justify-content: space-between;
@@ -31,6 +36,11 @@
 
       @media (min-width: 1200px) {
         margin-left: 0;
+      }
+
+      .sort-text{
+        margin-right: 16px;
+        vertical-align: middle;
       }
 
       button {

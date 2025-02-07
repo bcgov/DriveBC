@@ -601,12 +601,12 @@ export default function EventsListPage() {
                     {(selectedRoute && selectedRoute.routeFound)? 'Edit route' : 'Find route'}
                 </Button>
               }
-
               <Dropdown className="sorting">
+                {xXlargeScreen && <span className="sort-text">Sort: </span>}
                 <Dropdown.Toggle variant="outline-primary" disabled={selectedRoute && selectedRoute.routeFound}>
                   {xXlargeScreen ?
                     <React.Fragment>
-                      Sort: {getSortingDisplay(sortingKey)}
+                      {getSortingDisplay(sortingKey)}
                       <FontAwesomeIcon icon={faAngleDown} />
                     </React.Fragment>
                     :
@@ -626,7 +626,7 @@ export default function EventsListPage() {
                 disableFeatures={true}
                 enableRoadConditions={false}
                 enableChainUps={true}
-                textOverride={'List filters'}
+                textOverride={'List'}
                 isDelaysPage={true}
               />
             </div>
